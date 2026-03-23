@@ -1,0 +1,67 @@
+@use "../abstracts/variables" as var;
+@use "./fonts";
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Satoshi';
+    color: var.$text-main;
+}
+
+h1 {
+    font-size: 12rem;
+    font-weight: 300;
+    letter-spacing: 0.5rem;
+
+}
+
+h2 {
+    font-size: 10rem;
+    font-weight: 300;
+    color: var.$text-primary;
+
+    span {
+        font-family: 'Gambetta';
+        font-style: italic;
+        font-weight: 300;
+    }
+}
+
+
+h3 {
+    font-size: 2.4rem;
+    font-family: 'Satoshi';
+    font-weight: 300;
+}
+
+p {
+    font-family: 'Chillax';
+    font-size: 2.1rem;
+    font-weight: 300;
+    letter-spacing: 0.2rem;
+    line-height: 150%;
+}
+
+h4 {
+    font-size: 2.4rem;
+    font-family: 'Satoshi';
+
+    font-weight: 300;
+}
+
+h6 {
+    font-size: 1.3rem;
+    font-family: 'Satoshi';
+
+    font-weight: 300;
+}
+
+h5 {
+    font-size: 1.6rem;
+    font-family: 'Chillax';
+    font-weight: 400;
+    color: var.$text-main;
+    line-height: 180%;
+}

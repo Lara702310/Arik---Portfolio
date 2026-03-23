@@ -1,0 +1,61 @@
+@use "./variables" as var;
+
+
+@mixin flex-column-items($justify: null, $align: null, $direction: null) {
+    display: flex;
+    flex-direction: $direction;
+    justify-items: $justify;
+    align-items: $align;
+}
+
+@mixin flex-column($justify: null, $align: null, $direction: column) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+
+}
+
+@mixin flex-wrap($justify: null, $align: null, $flex-wrap: null) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: $justify;
+    align-content: $align;
+}
+
+@mixin flex-box($justify: null, $align: null) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+
+
+@mixin flex-menu($grow: 0.5, $shrink: 0.5, $basis: auto) {
+    ul {
+        display: flex;
+        justify-items: center;
+        align-items: center;
+
+        li {
+            flex: $grow $shrink $basis;
+        }
+    }
+}
+
+@mixin flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin flex-lyst {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+
+
+

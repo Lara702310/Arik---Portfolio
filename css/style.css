@@ -1,0 +1,872 @@
+@font-face {
+  font-family: "Satoshi";
+  src: url("../fonts/Satoshi-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Satoshi";
+  src: url("../fonts/Satoshi-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Satoshi";
+  src: url("../assets/fonts/Satoshi-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Satoshi";
+  src: url("../fonts/Satoshi-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Chillax";
+  src: url("../fonts/Chillax-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Chillax";
+  src: url("../fonts/Chillax-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Chillax";
+  src: url("../fonts/Chillax-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Gambetta";
+  src: url("../fonts/Gambetta-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Gambetta";
+  src: url("../fonts/Gambetta-LightItalic.woff2") format("woff2");
+  font-weight: 300;
+  font-display: swap;
+  font-style: italic;
+}
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+}
+
+/* Set core body defaults */
+body {
+  box-sizing: border-box;
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a {
+  text-decoration-line: none;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+svg,
+picture {
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  padding: 0;
+  border: none;
+  color: inherit;
+  background-color: transparent;
+}
+
+/* Make sure textarea without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+body {
+  padding: 2px;
+  width: 100%;
+  background-color: rgb(5, 4, 4);
+}
+
+html {
+  font-size: 62.5%;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Satoshi";
+  color: rgba(218, 197, 167, 0.6);
+}
+
+h1 {
+  font-size: 12rem;
+  font-weight: 300;
+  letter-spacing: 0.5rem;
+}
+
+h2 {
+  font-size: 10rem;
+  font-weight: 300;
+  color: rgb(218, 197, 167);
+}
+h2 span {
+  font-family: "Gambetta";
+  font-style: italic;
+  font-weight: 300;
+}
+
+h3 {
+  font-size: 2.4rem;
+  font-family: "Satoshi";
+  font-weight: 300;
+}
+
+p {
+  font-family: "Chillax";
+  font-size: 2.1rem;
+  font-weight: 300;
+  letter-spacing: 0.2rem;
+  line-height: 150%;
+}
+
+h4 {
+  font-size: 2.4rem;
+  font-family: "Satoshi";
+  font-weight: 300;
+}
+
+h6 {
+  font-size: 1.3rem;
+  font-family: "Satoshi";
+  font-weight: 300;
+}
+
+h5 {
+  font-size: 1.6rem;
+  font-family: "Chillax";
+  font-weight: 400;
+  color: rgba(218, 197, 167, 0.6);
+  line-height: 180%;
+}
+
+.logo__card {
+  padding: 3.5rem;
+  width: 58.4rem;
+  height: 42.6rem;
+  background: rgba(26, 26, 26, 0.6);
+  border: 1px solid rgba(51, 51, 51, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.logo__card h4 {
+  color: rgb(218, 197, 167);
+  letter-spacing: 0.1rem;
+  line-height: 130%;
+}
+.logo__card:nth-child(3) {
+  transform: translateY(-3rem);
+}
+.logo__card:nth-child(5) {
+  transform: translateY(-6rem);
+}
+.logo__card--big {
+  width: 58.4rem;
+  height: 45.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.services-card {
+  padding: 2rem 3rem;
+  width: 44.5rem;
+  height: 31.1rem;
+  background-color: rgb(25, 24, 23);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.services-card h4 {
+  text-transform: uppercase;
+}
+.services-card p {
+  font-size: 1.6rem;
+  line-height: 180%;
+  letter-spacing: 0%;
+  margin-bottom: 1rem;
+}
+.services-card span {
+  font-size: 1.2rem;
+}
+
+.section-work__card {
+  padding-bottom: 3rem;
+  width: 68.4rem;
+  height: 51.3rem;
+  background-image: url(../assets/images/Image-Wrapper.png);
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+}
+.section-work__card--nova {
+  background-image: url(../assets/images/Gridpng.png);
+}
+.section-work__card--sonic {
+  background-image: url(../assets/images/Grid-2png.png);
+}
+.section-work__card--solar {
+  background-image: url(../assets/images/Grid3png.png);
+}
+
+.step-card {
+  width: 60rem;
+  height: 46rem;
+  background: rgba(26, 26, 26, 0.6);
+  padding: 2.5rem 1.5rem 4rem 4rem;
+  border-radius: 2px;
+  border: 1px solid rgba(51, 51, 51, 0.5);
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  transition: transform 0.3s ease;
+}
+.step-card h3,
+.step-card h6 {
+  text-transform: uppercase;
+  font-weight: 300;
+  margin-bottom: 1rem;
+}
+.step-card ul {
+  padding: 0 1rem;
+}
+.step-card ul li {
+  list-style-type: disc;
+  font-size: 1.6rem;
+  color: rgb(218, 197, 167);
+  line-height: 5rem;
+}
+
+.header-nav-menu__button {
+  font-size: 1.3rem;
+  font-weight: 400;
+  line-height: 160%;
+  cursor: pointer;
+  letter-spacing: 0.15rem;
+  text-transform: uppercase;
+  color: rgb(14, 14, 14);
+  padding: 1rem 1.6rem;
+  background-color: rgb(218, 197, 167);
+}
+.header-nav-menu__button:hover {
+  background-color: rgba(212, 176, 126, 0.6);
+}
+
+.btn__icon {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+}
+.btn__icon img {
+  padding: 0.5rem;
+  border-radius: 50%;
+  width: 4.2rem;
+  height: 4.2rem;
+}
+.btn__icon span {
+  font-size: 1.3rem;
+  text-transform: uppercase;
+}
+
+.footer__button {
+  width: 16.6rem;
+  height: 4rem;
+  cursor: pointer;
+  border-radius: 0.2rem;
+  background-color: rgba(212, 176, 126, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  color: black;
+}
+.footer__button img {
+  width: 1.8rem;
+}
+
+.header-container {
+  max-width: 1920px;
+  max-height: 110rem;
+  margin: 0 auto;
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(rgba(1, 0, 1, 0.2), rgba(0, 0, 0, 0.4)), url(../assets/images/hero-img.png);
+  background-repeat: no-repeat;
+  background-position-y: top;
+  background-position-x: center;
+}
+
+.header-inner {
+  padding-top: 4rem;
+  width: 100%;
+  height: 100rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.header-nav-bar {
+  width: 57.6rem;
+  height: 6.5rem;
+  padding: 0 1.5rem;
+  border-radius: 0.2rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(25, 25, 25, 0.6);
+  backdrop-filter: blur(0.5rem);
+  -webkit-backdrop-filter: blur(1.8rem);
+  box-shadow: 0 0.8rem 3.2rem 0 rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+
+.header-nav-menu-list__item {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+.header-nav-menu-list__item a {
+  font-size: 1.3rem;
+  font-weight: 400;
+  letter-spacing: 0.15rem;
+  line-height: 160%;
+  text-transform: uppercase;
+  color: rgba(218, 197, 167, 0.6);
+}
+
+.hero__title {
+  padding: 3rem;
+  max-width: 101rem;
+  max-height: 42rem;
+  margin: 0 auto;
+  text-align: center;
+}
+.hero__title h1 span {
+  font-family: "Gambetta";
+  font-style: italic;
+  font-weight: 300;
+}
+.hero__title p {
+  width: 60rem;
+  margin: 0 auto;
+}
+
+.section-logo {
+  width: 100%;
+  height: 16.3rem;
+  margin-top: 10rem;
+}
+
+.logo-list {
+  width: 120rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  gap: 6rem;
+}
+.logo-list img {
+  height: 3rem;
+}
+
+.section-services {
+  width: 100%;
+  max-height: 39.4rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 3.2rem;
+  margin-bottom: 8rem;
+}
+
+.section-work {
+  width: 100%;
+  margin-bottom: 15rem;
+}
+
+.section-work-cards {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2.5rem;
+}
+
+.section-work__title {
+  padding: 0.8rem 2rem;
+  width: 100%;
+  height: 10.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.section-work__title h2 span {
+  font-family: "Gambetta";
+  font-style: italic;
+  font-weight: 300;
+}
+
+.card__list {
+  padding-right: 2rem;
+  width: 62rem;
+  height: 5.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 0.1rem solid rgba(186, 172, 153, 0.15);
+  background-color: rgba(186, 172, 153, 0.15);
+  backdrop-filter: blur(0.8rem);
+  -webkit-backdrop-filter: blur(1.1rem);
+  box-shadow: 0 0.8rem 3.2rem 0 rgba(0, 0, 0, 0.1);
+}
+.card__list li:nth-child(1) span {
+  font-size: 2.4rem;
+  padding-left: 1rem;
+}
+.card__list li:nth-child(2) span {
+  font-size: 1.1rem;
+  text-transform: uppercase;
+}
+
+.process-container {
+  max-width: 1400px;
+  max-height: 280rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.container__title {
+  width: 71rem;
+  height: 40rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-items: space-evenly;
+  align-items: center;
+  text-align: center;
+  gap: 2rem;
+}
+.container__title p {
+  width: 50rem;
+}
+.container__title {
+  margin-bottom: 15rem;
+}
+
+.title__label {
+  font-size: 1.6rem;
+  text-transform: uppercase;
+}
+
+.process-grid {
+  display: grid;
+  grid-template-columns: 1fr 1rem 1fr;
+  grid-template-areas: "  .  step   step1" "step2  step .    " ".   step   step3" "step4   step  .    " "   .  step  step5";
+}
+.process-grid .step-card--1 {
+  grid-area: step1;
+  justify-self: end;
+  transform: translateY(4rem);
+}
+.process-grid .step-card--2 {
+  grid-area: step2;
+}
+.process-grid .step-card--3 {
+  grid-area: step3;
+  justify-self: end;
+  transform: translateY(-4rem);
+}
+.process-grid .step-card--4 {
+  grid-area: step4;
+  transform: translateY(-8rem);
+}
+.process-grid .step-card--5 {
+  grid-area: step5;
+  justify-self: end;
+  transform: translateY(-12rem);
+}
+.process-grid .central-line {
+  grid-area: step;
+}
+.process-grid {
+  position: relative;
+}
+
+.central-line {
+  background-color: rgba(26, 26, 26, 0.5);
+  width: 0.1rem;
+  height: 200rem;
+  transform: translateY(-5rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.central-line span {
+  padding: 1rem;
+  width: 4.5rem;
+  height: 4.5rem;
+  font-size: 1.6rem;
+  text-align: center;
+  border-radius: 50%;
+  border: 0.005px solid rgba(220, 200, 168, 0.3);
+  background-color: rgba(26, 26, 26, 0.5);
+}
+.central-line span:nth-child(1) {
+  transform: translateY(-30rem);
+}
+.central-line span:nth-child(2) {
+  transform: translateY(-25rem);
+}
+.central-line span:nth-child(3) {
+  transform: translateY(-10rem);
+}
+.central-line span:nth-child(4) {
+  transform: translateY(2rem);
+}
+.central-line span:nth-child(5) {
+  transform: translateY(15rem);
+}
+.central-line span:nth-child(6) {
+  transform: translateY(25rem);
+}
+.central-line span img {
+  cursor: pointer;
+  text-align: center;
+  filter: brightness(0) invert(1) contrast(0.2);
+}
+
+.step-badge {
+  width: 7rem;
+  height: 3rem;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  padding: 0.8rem;
+  border: 0.1px solid rgba(72, 60, 42, 0.6);
+  background-color: rgba(186, 172, 153, 0.15);
+  align-self: end;
+}
+
+.customer-opinion-sub__title {
+  width: 120rem;
+  height: 27rem;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 6.4rem;
+}
+.customer-opinion-sub__title p {
+  margin: 0 auto;
+  width: 70rem;
+  text-align: center;
+  letter-spacing: 0.2rem;
+}
+
+.customer-opinion-cards {
+  max-width: 120rem;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+}
+
+.logo__card--info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.logo__img {
+  width: 11.6rem;
+  height: 3rem;
+  margin-bottom: 2rem;
+}
+.logo__img--smoll {
+  width: 3rem;
+}
+.logo__img--larg {
+  width: 7rem;
+}
+.logo__img--mm {
+  width: 5rem;
+}
+
+.avatar {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.avatar h6 {
+  color: rgba(220, 200, 168, 0.3);
+}
+
+.avatar__img {
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+}
+
+.section-about {
+  max-width: 1920px;
+  margin: 0 auto;
+  height: 120rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background: linear-gradient(rgba(1, 0, 1, 0.2), rgba(0, 0, 0, 0.4)), url(../assets/images/hero-img.png);
+  background-repeat: no-repeat;
+  background-position-y: top;
+  background-position-x: center;
+  position: relative;
+}
+
+.banner {
+  padding: 0.5rem 2rem;
+  display: flex;
+  justify-content: space-between;
+}
+.banner h1 {
+  font-size: 9rem;
+  display: inline-block;
+}
+.banner h1 span {
+  font-family: "Gambetta";
+  font-style: italic;
+  font-weight: 300;
+}
+
+.about-container {
+  width: 120rem;
+  height: 22.3rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+.about-container h3 {
+  padding: 1rem;
+  width: 56.8rem;
+  font-size: 4rem;
+  color: rgb(218, 197, 167);
+}
+.about-container h3 span {
+  font-family: "Gambetta";
+  font-style: italic;
+  font-weight: 300;
+}
+
+.about-container__item {
+  padding: 2rem;
+  width: 56.8rem;
+}
+.about-container__item h6 {
+  font-size: 1.8rem;
+  line-height: 160%;
+  height: 14.5rem;
+  letter-spacing: 0.1rem;
+  margin-bottom: 2rem;
+}
+.about-container__item img {
+  display: inline-block;
+  width: 4rem;
+  margin-left: 1rem;
+  cursor: pointer;
+}
+
+.section-cta-line__img {
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+  height: 5rem;
+}
+
+.section-cta-container {
+  width: 100%;
+  max-width: 120rem;
+  height: 76rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.cta-container__title {
+  text-align: center;
+  width: 84.3rem;
+  height: 37rem;
+}
+.cta-container__title h2 {
+  letter-spacing: 0.6rem;
+}
+
+footer {
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+  height: 51rem;
+  background-color: rgb(26, 26, 26);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.footer-container {
+  padding: 2rem;
+  width: 1600px;
+  height: 26.5rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-logo {
+  width: 31rem;
+  height: 26rem;
+}
+.footer-logo img {
+  width: 5rem;
+}
+
+.footer-nav {
+  width: 31rem;
+  height: 26rem;
+}
+.footer-nav ul {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.footer-nav ul li span {
+  color: rgba(220, 200, 168, 0.3);
+  font-size: 1.3rem;
+  text-transform: uppercase;
+}
+
+.list__title {
+  font-size: 2rem;
+}
+
+.footer-label {
+  width: 1600px;
+  height: 6rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer-label p {
+  font-size: 1.2rem;
+}
+.footer-label button {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.footer-label button span {
+  font-size: 1.3rem;
+  text-transform: uppercase;
+}
+
+.app-wrapper {
+  width: 100%;
+  padding: 0.2rem;
+  max-width: 140rem;
+  margin: 0 auto;
+}/*# sourceMappingURL=style.css.map */

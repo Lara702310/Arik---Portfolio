@@ -1,0 +1,91 @@
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as m;
+
+.header-container {
+    max-width: 1920px;
+    max-height: 110rem;
+    margin: 0 auto;
+    padding-top: 10px;
+    @include m.flex-column-items($align: center, $direction: column);
+
+    background: var.$bg-avatar, url(../assets/images/hero-img.png);
+    background-repeat: no-repeat;
+    background-position-y: top;
+    background-position-x: center;
+}
+
+.header-inner {
+    padding-top: 4rem;
+    width: 100%;
+    height: 100rem;
+    @include m.flex-column($justify: space-between, $direction: column);
+}
+
+.header-nav-bar {
+    width: 57.6rem;
+    height: 6.5rem;
+    padding: 0 1.5rem;
+    border-radius: 0.2rem;
+    margin: 0 auto;
+    @include m.flex-between;
+
+    background-color: var.$bg-nav-bar;
+    backdrop-filter: blur(0.5rem);
+    -webkit-backdrop-filter: blur(1.8rem);
+    box-shadow: var.$box-shadov;
+    z-index: 2;
+}
+
+.header-nav-menu-list__item {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+
+    a {
+        font-size: 1.3rem;
+        font-weight: 400;
+        letter-spacing: 0.15rem;
+        line-height: 160%;
+        text-transform: uppercase;
+        color: var.$text-main;
+    }
+}
+
+
+.hero__title {
+    padding: 3rem;
+    max-width: 101rem;
+    max-height: 42rem;
+    margin: 0 auto;
+    text-align: center;
+
+    h1 {
+        span {
+            font-family: "Gambetta";
+            font-style: italic;
+            font-weight: 300;
+        }
+    }
+
+    p {
+        width: 60rem;
+        margin: 0 auto;
+    }
+}
+
+.section-logo {
+    width: 100%;
+    height: 16.3rem;
+    margin-top: 10rem;
+}
+
+.logo-list {
+    width: 120rem;
+    margin: 0 auto;
+    @include m.flex-box($justify: center);
+    gap: 6rem;
+
+    img {
+        height: 3rem;
+    }
+}

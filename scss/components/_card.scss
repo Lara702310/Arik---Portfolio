@@ -1,0 +1,115 @@
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as m;
+
+
+.logo__card {
+    padding: 3.5rem;
+    width: 58.4rem;
+    height: 42.6rem;
+    background: var.$bg-step-card;
+    border: 1px solid var.$bg-card-border;
+    @include m.flex-column($justify: space-between, $direction: column);
+
+    h4 {
+        color: var.$text-primary;
+        letter-spacing: 0.1rem;
+        line-height: 130%;
+    }
+
+    &:nth-child(3) {
+        transform: translateY(-3rem);
+    }
+
+    &:nth-child(5) {
+        transform: translateY(-6rem);
+    }
+
+    &--big {
+        width: 58.4rem;
+        height: 45.5rem;
+        margin-bottom: 0.5rem;
+    }
+}
+
+
+// ========== main. section:  article-services  ========
+.services-card {
+    padding: 2rem 3rem;
+    width: 44.5rem;
+    height: 31.1rem;
+    background-color: var.$bg-card;
+    @include m.flex-column($justify: space-evenly, $direction: column);
+
+    h4 {
+        text-transform: uppercase;
+    }
+
+    p {
+        font-size: 1.6rem;
+        line-height: 180%;
+        letter-spacing: 0%;
+        margin-bottom: 1rem;
+    }
+
+    span {
+        font-size: 1.2rem;
+    }
+
+}
+
+
+.section-work__card {
+    padding-bottom: 3rem;
+    width: 68.4rem;
+    height: 51.3rem;
+    background-image: url(../assets/images/Image-Wrapper.png);
+    @include m.flex-column($justify: end, $align: center, $direction: column);
+
+    &--nova {
+        background-image: url(../assets/images/Gridpng.png);
+    }
+
+    &--sonic {
+        background-image: url(../assets/images/Grid-2png.png);
+    }
+
+    &--solar {
+        background-image: url(../assets/images/Grid3png.png);
+    }
+
+}
+
+// ==================  section Process =========================
+
+.step-card {
+    width: 60rem;
+    height: 46rem;
+    background: var.$bg-step-card;
+    padding: 2.5rem 1.5rem 4rem 4rem;
+    border-radius: 2px;
+    border: 1px solid var.$bg-card-border;
+    @include m.flex-column($direction: column);
+    gap: 0.8rem;
+    transition: transform 0.3s ease;
+
+    h3,
+    h6 {
+        text-transform: uppercase;
+        font-weight: 300;
+        margin-bottom: 1rem;
+    }
+
+
+    ul {
+        padding: 0 1rem;
+
+        li {
+
+            list-style-type: disc;
+            font-size: 1.6rem;
+            color: var.$text-primary ;
+            line-height: 5rem;
+        }
+    }
+
+}

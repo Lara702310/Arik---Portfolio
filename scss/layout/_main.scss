@@ -1,0 +1,332 @@
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as m;
+
+
+//  ========== main. section:  article-services =============================
+
+.section-services {
+    width: 100%;
+    max-height: 39.4rem;
+    @include m.flex-box($justify: space-between);
+    gap: 3.2rem;
+    margin-bottom: 8rem;
+}
+
+
+//  ===================  section-work  ====================================
+.section-work {
+    width: 100%;
+    margin-bottom: 15rem;
+}
+
+.section-work-cards {
+    width: 100%;
+    @include m.flex-wrap($justify: space-between, $flex-wrap: wrap);
+    gap: 2.5rem;
+}
+
+.section-work__title {
+    padding: 0.8rem 2rem;
+    width: 100%;
+    height: 10.2rem;
+    @include m.flex-between;
+
+    h2 {
+        span {
+            font-family: 'Gambetta';
+            font-style: italic;
+            font-weight: 300;
+        }
+    }
+}
+
+
+.card__list {
+    padding-right: 2rem;
+    width: 62rem;
+    height: 5.5rem;
+    @include m.flex-between;
+    border: 0.1rem solid var.$bg-card-list;
+    background-color: var.$bg-card-list;
+    backdrop-filter: blur(0.8rem);
+    -webkit-backdrop-filter: blur(1.1rem);
+    box-shadow: var.$box-shadov;
+
+    li {
+        &:nth-child(1)span {
+            font-size: 2.4rem;
+            padding-left: 1rem;
+        }
+
+        &:nth-child(2)span {
+            font-size: 1.1rem;
+            text-transform: uppercase;
+        }
+    }
+}
+
+.process-container {
+    max-width: 1400px;
+    max-height: 280rem;
+    margin: 0 auto;
+    @include m.flex-column($justify: space-between, $direction: column);
+}
+
+.container__title {
+    width: 71rem;
+    height: 40rem;
+    margin: 0 auto;
+    @include m.flex-column-items($justify: space-evenly, $align: center, $direction: column);
+    text-align: center;
+    gap: 2rem;
+
+    p {
+        width: 50rem;
+    }
+
+    margin-bottom: 15rem;
+}
+
+.title__label {
+    font-size: 1.6rem;
+    text-transform: uppercase;
+}
+
+//  ===================== Grid ==========================
+.process-grid {
+    display: grid;
+    grid-template-columns: 1fr 1rem 1fr;
+    grid-template-areas:
+        "  .  step   step1"
+        "step2  step .    "
+        ".   step   step3"
+        "step4   step  .    "
+        "   .  step  step5";
+
+    .step-card--1 {
+        grid-area: step1;
+        justify-self: end;
+        transform: translateY(4rem);
+
+    }
+
+    .step-card--2 {
+        grid-area: step2;
+    }
+
+    .step-card--3 {
+        grid-area: step3;
+        justify-self: end;
+        transform: translateY(-4rem);
+    }
+
+    .step-card--4 {
+        grid-area: step4;
+        transform: translateY(-8rem);
+    }
+
+    .step-card--5 {
+        grid-area: step5;
+        justify-self: end;
+        transform: translateY(-12rem);
+    }
+
+    .central-line {
+        grid-area: step;
+    }
+
+    position: relative;
+}
+
+.central-line {
+    background-color: var.$bg-span;
+    width: 0.1rem;
+    height: 200rem;
+    transform: translateY(-5rem);
+    @include m.flex-column($justify: space-evenly, $align: center, $direction: column);
+
+    span {
+        padding: 1rem;
+        width: 4.5rem;
+        height: 4.5rem;
+        font-size: 1.6rem;
+        text-align: center;
+        border-radius: 50%;
+        border: 0.005px solid var.$text-secondary;
+        background-color: var.$bg-span;
+
+        &:nth-child(1) {
+            transform: translateY(-30rem);
+        }
+
+        &:nth-child(2) {
+            transform: translateY(-25rem);
+        }
+
+        &:nth-child(3) {
+            transform: translateY(-10rem);
+        }
+
+        &:nth-child(4) {
+            transform: translateY(2rem);
+        }
+
+        &:nth-child(5) {
+            transform: translateY(15rem);
+        }
+
+        &:nth-child(6) {
+            transform: translateY(25rem);
+        }
+
+        img {
+            cursor: pointer;
+            text-align: center;
+            filter: brightness(0) invert(1) contrast(0.2);
+        }
+    }
+}
+
+.step-badge {
+    width: 7rem;
+    height: 3rem;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    padding: 0.8rem;
+    border: 0.1px solid var.$bg-badge-border;
+    background-color: var.$bg-card-list;
+    align-self: end;
+}
+
+//  =================== section opinion ===================
+
+.customer-opinion-sub__title {
+    width: 120rem;
+    height: 27rem;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 6.4rem;
+
+    p {
+        margin: 0 auto;
+        width: 70rem;
+        text-align: center;
+        letter-spacing: 0.2rem;
+    }
+}
+
+.customer-opinion-cards {
+    max-width: 120rem;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+}
+
+.logo__card--info {
+    @include m.flex-column($direction: column);
+    gap: 0.5rem;
+}
+
+.logo__img {
+    width: 11.6rem;
+    height: 3rem;
+    margin-bottom: 2rem;
+
+    &--smoll {
+        width: 3rem;
+    }
+
+    &--larg {
+        width: 7rem;
+    }
+
+    &--mm {
+        width: 5rem;
+    }
+}
+
+.avatar {
+    @include m.flex-box($align: center);
+    gap: 2rem;
+
+    h6 {
+        color: var.$text-secondary;
+    }
+}
+
+.avatar__img {
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+}
+
+// =========================  section-about  ========================
+
+.section-about {
+    max-width: 1920px;
+    margin: 0 auto;
+    height: 120rem;
+    @include m.flex-column($justify: space-around, $direction: column);
+    background: var.$bg-avatar, url(../assets/images/hero-img.png);
+    background-repeat: no-repeat;
+    background-position-y: top;
+    background-position-x: center;
+    position: relative;
+}
+
+.banner {
+    padding: 0.5rem 2rem;
+    @include m.flex-box($justify: space-between);
+
+    h1 {
+        font-size: 9rem;
+        display: inline-block;
+
+        span {
+            font-family: "Gambetta";
+            font-style: italic;
+            font-weight: 300;
+        }
+    }
+}
+
+.about-container {
+    width: 120rem;
+    height: 22.3rem;
+    margin: 0 auto;
+    @include m.flex-box($justify: space-between);
+
+    h3 {
+        padding: 1rem;
+        width: 56.8rem;
+        font-size: 4rem;
+        color: var.$text-primary;
+
+        span {
+            font-family: 'Gambetta';
+            font-style: italic;
+            font-weight: 300;
+        }
+    }
+}
+
+.about-container__item {
+    padding: 2rem;
+    width: 56.8rem;
+
+    h6 {
+        font-size: 1.8rem;
+        line-height: 160%;
+        height: 14.5rem;
+        letter-spacing: 0.1rem;
+        margin-bottom: 2rem;
+    }
+
+    img {
+        display: inline-block;
+        width: 4rem;
+        margin-left: 1rem;
+        cursor: pointer;
+    }
+}
